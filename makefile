@@ -2,9 +2,9 @@
 
 run:
 	clear
-	gcc simplex.cpp -o smd -lstdc++
+	gcc --coverage simplex.cpp -o smd -lstdc++
 	./smd
-	@echo " "
+	@gcov simplex.cpp -m
 	ctags -R .
 
 clean:
